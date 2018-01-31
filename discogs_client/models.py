@@ -480,6 +480,8 @@ class Release(PrimaryAPIObject):
     credits = ListField('Artist', key='extraartists')
     labels = ListField('Label')
     companies = ListField('Label')
+    lowest_price = SimpleField()
+    num_for_sale = SimpleField()
 
     def __init__(self, client, dict_):
         super(Release, self).__init__(client, dict_)
